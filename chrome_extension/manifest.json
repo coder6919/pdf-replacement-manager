@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "PDF Replacement Manager Companion",
+  "version": "1.0.0",
+  "description": "Optional helper: tells the local PDF Replacement Manager which allow-listed website a PDF came from, and shows processing status.",
+  "permissions": ["downloads", "storage"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "PDF Replacement Manager" },
+  "options_page": "options.html"
+}

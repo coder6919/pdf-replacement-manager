@@ -1,0 +1,17 @@
+# environments & builds
+.venv/
+build/
+dist/
+__pycache__/
+*.pyc
+*.spec.bak
+
+# never commit documents, personal data or app data
+*.pdf
+*.zip
+*.sqlite3
+*.sqlite3-*
+*.jsonl
+Downloads/
+appdata/
+*.log

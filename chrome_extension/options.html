@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PDF Replacement Manager Companion</title>
+  <style>
+    body { font: 14px "Segoe UI", sans-serif; max-width: 640px; margin: 24px; }
+    label { display: block; margin-top: 14px; font-weight: 600; }
+    input, textarea { width: 100%; box-sizing: border-box; padding: 6px; font: inherit; }
+    p { color: #555; }
+  </style>
+</head>
+<body>
+  <h2>PDF Replacement Manager Companion</h2>
+  <p>Optional. The desktop app already detects Chrome downloads without this extension. Use it only when a website
+     delivers PDFs in a way that hides their source (for example blob: downloads), or to see status in Chrome.</p>
+  <label>Port <input id="port" type="number" min="1024" max="65535"></label>
+  <label>Pairing token (Settings &amp; backup → Chrome extension bridge → Copy)
+    <input id="token" type="password" autocomplete="off"></label>
+  <label>Allowed websites (one per line, e.g. portal.example.com or *.example.org)
+    <textarea id="hosts" rows="5"></textarea></label>
+  <p>Only completed PDF downloads from these websites are reported: the file name and the address without its
+     query string. Cookies, passwords, page content and file contents are never read or sent.</p>
+  <button id="save">Save</button> <span id="msg"></span>
+  <script src="options.js"></script>
+</body>
+</html>
